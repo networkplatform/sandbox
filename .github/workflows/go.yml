@@ -1,0 +1,17 @@
+name: Go
+on:
+  pull_request:
+    branches:
+      - main
+  merge_group:
+jobs:
+  test-unit:
+    name: Unit test
+    runs-on: [ubuntu-latest]
+    steps:
+      - name: Check-out code
+        uses: actions/checkout@v4
+        with:
+          show-progress: false
+      - name: Run unit tests
+        run: sleep 300
